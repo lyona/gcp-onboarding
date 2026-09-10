@@ -1,0 +1,30 @@
+Subject: Welcome to Company - Technology Onboarding
+
+{{ first_name }},
+
+
+Welcome to Company!
+
+
+Your Company Google Workspace account has been created, please sign in using the username and password below to set-up your account.
+
+Username: {{ email }}
+Password: {{ password }}
+
+During the setup process, enable 2-step verification when prompted. Alternatively, navigate to your <a href="https://myaccount.google.com/u/0/security">security settings</a> to enable 2-step verification.
+
+
+You should have received invitations to the following tools. Please follow the links in the invitations to log in and set up your profile.
+
+
+<ul>
+  {% for app in applications %}
+  <li><a href="{{ app.url }}">{{ app.name }}</a></li>
+  {% endfor %}
+</ul>
+
+
+If you have any questions, don't hesitate to reach out!
+
+
+Technology Team
